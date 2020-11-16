@@ -5,3 +5,5 @@
 var sortColors = function (nums) {
     return nums.sort((a, b) => a - b);
 };
+
+console.log(sortColors([3, 3, 2, 1, 2, 4]))
