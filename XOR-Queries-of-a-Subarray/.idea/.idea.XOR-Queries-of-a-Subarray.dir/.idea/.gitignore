@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.XOR-Queries-of-a-Subarray.iml
+/contentModel.xml
+# Datasource local storage ignored files
+/../../../../../../../../../../../../:\Users\Nixon\OneDrive\Documents\Najib\Programming Practice\Leetcode [WIP]\XOR-Queries-of-a-Subarray\.idea\.idea.XOR-Queries-of-a-Subarray.dir\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
