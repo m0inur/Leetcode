@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        body {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    function subsets(nums, number = []) {
+        const result = [];
+
+        const search = (s, index) => {
+            result.push(s)
+
+            for (let i=index; i<nums.length; i++) {
+                search([...s, nums[i]], i+1);
+            }
+        }
+
+        search([], 0);
+
+        return Array.from(result);
+    }
+</script>
+</body>
+</html>
