@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <style>
+        body {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    /**
+     * @param {string} word
+     * @return {number}
+     */
+    let minTimeToType = function (word) {
+        let nums = word.split("").map((char) => char.charCodeAt(0) - "a".charCodeAt(0) + 1);
+
+        let seconds = 0;
+
+        let pointer = 1;
+        for (let i = 0; i < nums.length; i++) {
+            seconds += Math.min(Math.abs(pointer - nums[i]), 26 - Math.abs(pointer - nums[i])) + 1;
+            pointer = nums[i];
+        }
+
+        return seconds;
+    };
+    
+    let word = "bza";
+    console.log(minTimeToType(word));
+</script>
+</body>
+</html>
